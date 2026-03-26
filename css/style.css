@@ -1,0 +1,1595 @@
+/* ======================
+   BASE
+====================== */
+
+body{
+  font-family: 'Raleway', system-ui, sans-serif;
+  background:#f7f7f7;
+  font-weight:200;
+  margin:0;
+  color:#222;
+}
+
+h1,h2,h3,h4{
+  font-weight:200;
+  margin:0;
+}
+
+.muted{color:#666;}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+main{
+  margin:0 auto;
+  max-width:1100px;
+  padding:22px 20px 40px;
+}
+
+/* ======================
+   OLD TAG STYLES KILLED
+====================== */
+
+/* 旧デザインの header/nav/footer は無効化 */
+header:not(.site-header){ all:unset; display:block; }
+nav:not(.main-nav){ all:unset; display:block; }
+footer:not(.site-footer){ all:unset; display:block; }
+
+/* body中央寄せ事故防止 */
+body{text-align:left;}
+
+/* ======================
+   HEADER
+====================== */
+
+.site-header{
+  background:#fff;
+  border-bottom:1px solid #e6e6e6;
+  padding:18px 0;
+}
+
+.header-row{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.logo{
+  font-family:'Raleway', sans-serif;
+  font-size:4rem;
+  font-weight:200;
+  letter-spacing:.3px;
+  color:#666;
+  text-decoration:none;
+}
+
+.tagline{
+  margin-top:6px;
+  font-size:.9rem;
+  color:#666;
+}
+
+.brand-block{min-width:220px;}
+
+.header-nav{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.header-nav a{
+  text-decoration:none;
+  color:#222;
+  padding:8px 10px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  background:#fff;
+}
+
+.header-search{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.header-search input{
+  width:min(360px,45vw);
+  padding:10px 12px;
+  border:1px solid #ddd;
+  border-radius:12px;
+}
+
+.header-search button{
+  padding:10px 12px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  background:#fff;
+  cursor:pointer;
+}
+
+/* ======================
+   HERO
+====================== */
+
+.hero{padding:22px 0 40px;}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:18px;
+}
+
+.hero-side{
+  background:#fff;
+  border:1px solid #e6e6e6;
+  border-radius:16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  padding:16px 10px;
+}
+
+.year-btn{
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  border:1px solid #ddd;
+  background:#fff;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.year-pill{
+  width:56px;
+  padding:10px 0;
+  text-align:center;
+  border:1px solid #ddd;
+  border-radius:14px;
+  color:#666;
+}
+
+.hero-center{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #e6e6e6;
+  border-radius:16px;
+  padding:16px;
+}
+
+.spotlight{
+  min-height:180px;
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+}
+
+.spotlight-title{margin-bottom:8px;font-size:1.2rem;}
+.spotlight-sub{color:#666;}
+
+.mini-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.mini-card{
+  text-decoration:none;
+  color:inherit;
+  min-height:120px;
+}
+
+/* ======================
+   FOOTER
+====================== */
+
+.site-footer{
+  border-top:1px solid #e6e6e6;
+  background:#fff;
+  padding:30px 0;
+  margin-top:30px;
+}
+
+.footer-grid{
+  display:grid;
+  gap:14px;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media(max-width:860px){
+  .header-row{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .header-search input{width:100%;}
+
+
+
+  .hero-side{
+    flex-direction:row;
+    justify-content:space-between;
+  }
+
+  .mini-cards{grid-template-columns:1fr;}
+}
+/* 上段 */
+.header-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+}
+
+/* 下段ナビ */
+.main-nav{
+  border-top:1px solid #e6e6e6;
+  border-bottom:1px solid #e6e6e6;
+  background:#fff;
+}
+
+.nav-row{
+  display:flex;
+  gap:20px;
+  padding:14px 0;
+  justify-content:flex-start;
+}
+
+.main-nav a{
+  text-decoration:none;
+  color:#222;
+  padding:8px 12px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  background:#fff;
+}
+.main-nav{
+  border-top:1px solid #e6e6e6;
+  border-bottom:1px solid #e6e6e6;
+  background:#fff;
+}
+
+.nav-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:14px 0;
+}
+
+.nav-links{
+  display:flex;
+  gap:20px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#222;
+  padding:8px 12px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  background:#fff;
+}
+
+.nav-search{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.nav-search input{
+  padding:8px 12px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  width:220px;
+}
+
+.nav-search button{
+  padding:8px 12px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  background:#fff;
+  cursor:pointer;
+}
+main.container{ max-width:900px; }
+
+main.container{
+  background:#fff !important;
+  border-radius:20px !important;
+  overflow:hidden; /* 角丸を綺麗に見せる保険 */
+}
+
+/* ======================
+   TEXTURE PATCH (append)
+   ====================== */
+
+/* 1) トーンと線のルールを固定 */
+:root{
+  --line: #d0d0d0;
+  --line-soft: #e6e6e6;     /* 既存の e6 と整合 */
+  --line-strong: #c6c6c6;
+
+  --surface: #fff;
+  --surface-2: #fbfbfb;
+
+  --text: #222;
+  --muted: #666;
+
+  --r-lg: 20px;
+  --r-md: 16px;
+  --r-sm: 12px;
+
+  /* 影は “線とケンカしない” 薄め2段 */
+  --shadow-1: 0 1px 0 rgba(0,0,0,.04);
+  --shadow-2: 0 12px 28px rgba(0,0,0,.07);
+}
+
+/* 2) container / main：白箱の存在感を上げる（線＋影＋呼吸） */
+main.container{
+  max-width:900px;
+  background: var(--surface) !important;
+  border-radius: var(--r-lg) !important;
+  overflow:hidden;
+
+  /* ここが肝：border を明示して “白箱” を締める */
+  border: 1px solid var(--line) !important;
+
+  /* box-shadow で浮かせる（既存より上品に） */
+  box-shadow: var(--shadow-1), var(--shadow-2);
+
+  /* 余白：中身が窮屈ならここで一発改善 */
+  padding: 26px 24px 40px !important;
+}
+
+@media(max-width:700px){
+  main.container{
+    padding: 20px 16px 32px !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* 3) ヘッダー：線を統一（#d0d0d0系へ） */
+.site-header{
+  border-bottom:1px solid var(--line) !important;
+}
+
+.main-nav{
+  border-top:1px solid var(--line) !important;
+  border-bottom:1px solid var(--line) !important;
+}
+
+/* 4) ボタン/リンク/検索窓：枠色とホバーの“手触り” */
+.header-nav a,
+.main-nav a,
+.nav-links a{
+  border:1px solid var(--line) !important;
+  background: var(--surface-2);
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+  transition: border-color .15s ease, transform .15s ease, background .15s ease;
+}
+
+.header-nav a:hover,
+.main-nav a:hover,
+.nav-links a:hover{
+  border-color: var(--line-strong) !important;
+  background:#fff;
+  transform: translateY(-1px);
+}
+
+/* 検索窓も同じ“枠ルール”に */
+.header-search input,
+.nav-search input{
+  border:1px solid var(--line) !important;
+  background:#fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.header-search input:focus,
+.nav-search input:focus{
+  border-color: var(--line-strong) !important;
+  box-shadow: 0 0 0 3px rgba(0,0,0,.06);
+  outline:none;
+}
+
+.header-search button,
+.nav-search button{
+  border:1px solid var(--line) !important;
+  background: var(--surface-2);
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+  transition: border-color .15s ease, transform .15s ease, background .15s ease;
+}
+
+.header-search button:hover,
+.nav-search button:hover{
+  border-color: var(--line-strong) !important;
+  background:#fff;
+  transform: translateY(-1px);
+}
+
+/* 5) カード群：border を統一して “積層感” を作る */
+.card,
+.hero-side{
+  border:1px solid var(--line) !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+
+.spotlight{
+  /* 中央スポットは一段だけ強くして主役感 */
+  border:1px solid var(--line-strong) !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+}
+
+/* mini-card は“タイル感”：背景をほんの少しだけ持ち上げ */
+.mini-card{
+  display:block;
+  border:1px solid var(--line) !important;
+  background: var(--surface-2);
+  border-radius: var(--r-md);
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+  padding: 14px;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.mini-card:hover{
+  transform: translateY(-1px);
+  border-color: var(--line-strong) !important;
+  background:#fff;
+}
+
+/* 6) タイポ：階調を“ほんの少し”だけ整える */
+.logo{ letter-spacing: .2px; }
+
+.tagline,
+.muted,
+.spotlight-sub{
+  color: var(--muted) !important;
+}
+
+.spotlight-title{
+  font-size: 1.25rem !important;   /* いま 1.2 → 気持ちだけ格上げ */
+  letter-spacing: .2px;
+}
+
+/* 7) 区切り線が必要な場所に使える汎用 */
+.rule{
+  border-top:1px solid var(--line-soft);
+}
+.main-nav{
+  margin-bottom:20px !important;
+}
+.site-header{
+  padding: 44px 0 48px !important;
+}
+
+.logo{
+  font-size:2.4rem !important;
+  letter-spacing:.6px !important;
+}
+
+.tagline{
+  font-size:.85rem !important;
+  margin-top:12px !important;
+}
+/* ======================
+   TYPOGRAPHY RULE
+====================== */
+
+body{
+  font-family:'Raleway', sans-serif;
+  font-weight:300;
+  letter-spacing:.02em;
+}
+
+h1,h2,h3,h4{
+  font-weight:300;
+  letter-spacing:.04em;
+}
+
+.header-nav a,
+.main-nav a,
+button,
+input{
+  font-weight:400;
+  letter-spacing:.02em;
+}
+
+.logo{
+  font-weight:200;
+  letter-spacing:.05em;
+}
+:root{
+  --accent:#8a9891;
+}
+
+.section-heading{
+  color:var(--accent);
+}
+
+a:hover{
+  color:var(--accent);
+}
+#artist-panel{
+  margin: 14px 0;
+}
+#rank-panel{
+  margin: 14px 0;
+}
+#column-panel{
+  margin: 14px 0;
+}
+.artist-az{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+
+  background:#fff;
+  border:1px solid #e7e7e7;
+  border-radius:18px;
+  padding:12px;
+
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+}
+
+.artist-az a{
+  width:34px;
+  height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid #e7e7e7;
+  border-radius:10px;
+  text-decoration:none;
+  color:#222;
+
+  font-family:'Raleway', system-ui, sans-serif;
+}
+/* open/close animation (Safari friendly) */
+#artist-panel{
+  overflow: hidden;
+}
+
+
+
+@keyframes dropIn{
+  from{ opacity:0; transform: translateY(-6px); }
+  to{ opacity:1; transform: translateY(0); }
+}
+/* ===== NURU open/close animation ===== */
+.artist-panel{
+  /* 見た目はそのまま、アニメのための土台 */
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+
+  transition:
+    max-height 520ms cubic-bezier(.16, 1, .3, 1),
+    opacity 380ms ease,
+    transform 520ms cubic-bezier(.16, 1, .3, 1);
+}
+
+/* 開いた状態 */
+.artist-panel.is-open{
+  max-height: 240px; /* A-Z 2段くらいならこれで十分。足りなければ増やす */
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* “ねっとり感”を増す：少し遅れてフェード */
+.artist-panel.is-open .artist-az{
+  animation: azFade 420ms ease 80ms both;
+}
+
+@keyframes azFade{
+  from{ opacity: 0; transform: translateY(-4px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+/* ===== Yearly rankings panel style ===== */
+.year-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+
+  background:#fff;
+  border:1px solid #e7e7e7;
+  border-radius:18px;
+  padding:12px;
+
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+}
+
+.year-grid a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  height:34px;
+  padding: 0 12px;      /* 年は横長が気持ちいい */
+  border-radius: 999px; /* ピル型 */
+
+  border:1px solid #e7e7e7;
+  background:#fff;
+
+  color:#222;           /* 青リンク卒業 */
+  text-decoration:none;
+
+  font-family:'Raleway', system-ui, sans-serif;
+  font-weight:400;
+}
+
+.year-grid a:hover{
+  border-color:#9fb6ab;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+.year-grid a{
+  font-family:'Raleway', system-ui, sans-serif;
+  font-weight:400;
+}
+/* DEBUG: これで効かないなら “CSSが読まれてない” が確定 */
+.main-nav,
+.main-nav a,
+.year-grid,
+.year-grid a,
+.artist-az,
+.artist-az a{
+  font-family: 'Raleway', system-ui, sans-serif !important;
+  font-weight: 400 !important;
+}
+.year-grid a{
+  font-weight:300;
+  letter-spacing:.08em;
+}
+
+.year-grid a::first-letter{
+  opacity:.45;
+}.year-grid a{
+  font-weight:300;
+  letter-spacing:.08em;
+}
+
+.year-grid a::first-letter{
+  opacity:.4;
+}
+/* ===== Column panel style ===== */
+.column-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+
+  background:#fff;
+  border:1px solid #e7e7e7;
+  border-radius:18px;
+  padding:12px;
+
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+}
+
+.column-grid a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  height:34px;
+  padding: 0 12px;
+  border-radius: 999px;
+
+  border:1px solid #e7e7e7;
+  background:#fff;
+
+  color:#222;
+  text-decoration:none;
+
+  font-family:'Raleway', system-ui, sans-serif;
+  font-weight:400;
+}
+
+.column-grid a:hover{
+  border-color:#9fb6ab;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+
+.column-grid__all{
+  margin-left:auto; /* 右寄せで“入口”感 */
+  font-weight:400;
+}
+/* =========================
+   SONG SECTION CARDS (v4)
+========================= */
+
+main .song-section{
+  background: var(--surface, #fff);
+  border: 1px solid var(--line, #d0d0d0);
+  border-left: 6px solid var(--line-strong, #c6c6c6);
+  border-radius: 14px;
+  padding: 26px 28px;
+  margin: 26px 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03), 0 12px 28px rgba(0,0,0,.06);
+}
+
+/* 見出し行（INTRO / KEY） */
+main .song-section .section-title{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  font-weight:400;
+  letter-spacing:.06em;
+  margin:0 0 18px;
+}
+
+/* KEY 表示 */
+main .song-section .section-key{
+  font-size:.78rem;
+  color: var(--muted, #666);
+  letter-spacing:.08em;
+}
+
+/* コード本文：中央寄せ＋改行を効かせる */
+main .song-section .chords {
+  text-align: left;
+  line-height: 2;
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  margin-left: 24px;
+}
+
+/* =========================
+   MODULATION HIGHLIGHT
+========================= */
+
+main .song-section.modulated{
+  border-left-color:#5aa9e6;
+  background:#eef6ff;
+}
+
+main .song-section .section-key.modulated-key{
+  color: var(--accent, #5aa9e6);
+  font-weight: 500;
+}
+main .song-section.modulated{
+  border-left:6px solid #5aa9e6;
+  background:#eef6ff;
+  padding-left:18px;
+}
+/* =========================
+   SECTION TITLE TUNING
+========================= */
+
+main .song-section .section-title{
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+main .song-section .section-key{
+  font-weight: 400;
+  opacity: 0.8;
+}
+main .song-section .chords{
+  font-size: 1.05rem;
+  letter-spacing: .08em;
+}
+main .song-section.modulated{
+  background: #eef6ff;
+  border-left-color: #5aa9e6;
+  border-left-width: 10px;
+}
+/* =========================
+   SONG HEADER TUNING
+========================= */
+button{
+  font-family: inherit;
+}
+.song-key{
+  letter-spacing: .12em;
+  font-size: .9rem;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.song-credits{
+  line-height: 1.9;
+  font-size: .9rem;
+  margin-bottom: 20px;
+}
+
+.song-title{
+  margin:0 0 12px 0;
+}
+/* =========================
+   Toggle button (Roman ⇄ Chord)
+========================= */
+#toggle-notation{
+  font-family: inherit;          /* もう効いてるならOK */
+  font-size: .95rem;
+  letter-spacing: .08em;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line, #d0d0d0);
+  background: var(--surface-2, #fbfbfb);
+  color: var(--text, #222);
+
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+  transition: transform .15s ease, border-color .15s ease, background .15s ease, box-shadow .15s ease;
+}
+
+#toggle-notation:hover{
+  transform: translateY(-1px);
+  border-color: var(--line-strong, #c6c6c6);
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+#toggle-notation:active{
+  transform: translateY(0px);
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+/* ===== Artist list page layout ===== */
+
+
+.page-head{
+  padding: 18px 22px 14px;
+  border-bottom: 1px solid #e6e6e6; /* ←ここが“線で分離” */
+  background:#fafafa; /* いらなければ消してOK */
+}
+
+.breadcrumb{
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover{
+  text-decoration: underline;
+}
+
+.breadcrumb .sep{
+  margin: 0 8px;
+  color: #aaa;
+}
+
+.page-body{
+  padding: 18px 22px 22px;
+}
+
+.page-title{
+  margin: 0 0 8px;
+}
+
+.page-lead{
+  margin: 0 0 14px;
+}
+
+/* ===== Discography “table-like” grid ===== */
+.discography { margin-top: 28px; }
+.section-head { margin-bottom: 14px; }
+.section-head h2 { margin: 0 0 6px; font-size: 1.2rem; }
+
+.discography-grid{
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.dg-row{
+  display: grid;
+  grid-template-columns: 2.2fr 1.2fr 1fr 1.6fr;
+  gap: 12px;
+  padding: 12px 14px;
+  align-items: center;
+  border-top: 1px solid #efefef;
+}
+
+.dg-row:first-child{ border-top: none; }
+
+.dg-head{
+  background: #fafafa;
+  font-size: .85rem;
+  letter-spacing: .04em;
+}
+
+.dg-cell{ min-width: 0; }
+.dg-title a{ text-decoration: none; }
+.dg-title a:hover{ text-decoration: underline; }
+
+/* Mobile: collapse to “stacked rows” */
+@media (max-width: 760px){
+  .dg-row{
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .dg-head{ display:none; }
+  .dg-cell::before{
+    content: attr(data-label);
+    display: inline-block;
+    width: 92px;
+    color:#666;
+  }
+}
+
+/* Discography zebra rows (start from 1st album row) */
+.discography-grid .dg-head { 
+  background: #f6f6f6;
+}
+
+.discography-grid .dg-body .dg-row:nth-child(odd){
+  background: #fff;
+}
+
+.discography-grid .dg-body .dg-row:nth-child(even){
+  background: #fafafa;
+}
+/* Discography zebra rows */
+.discography-grid .dg-body > .dg-row:nth-child(odd),
+.discography-grid .dg-body > .dg-row:nth-child(odd) > .dg-cell{
+  background: #fff;
+}
+
+.discography-grid .dg-body > .dg-row:nth-child(even),
+.discography-grid .dg-body > .dg-row:nth-child(even) > .dg-cell{
+  background: #fafafa;
+}
+/* ===== Album page (A/B test) ===== */
+.album-head{
+  padding: 18px 0 10px;
+}
+.album-title{
+  font-size: 2.2rem;
+  margin: 0;
+}
+.album-sub{
+  margin: 6px 0 0;
+}
+
+/* Switch */
+.layout-switch .switch-row{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.layout-switch input[type="radio"]{
+  accent-color: auto;
+}
+
+/* show/hide layouts without JS */
+.album-layout{ display: none; }
+#layout-a:checked ~ .album-layout--a{ display:block; }
+#layout-b:checked ~ .album-layout--b{ display:block; }
+
+/* A: Zebra table */
+.track-table .col-no{ width: 52px; }
+.track-table .col-right{ text-align: right; white-space: nowrap; }
+
+/* zebra (tbody) */
+.track-table tbody tr:nth-child(even){
+  background: rgba(0,0,0,0.03);
+}
+
+/* B: Center blocks */
+.tracklist-center{
+  list-style: decimal;
+  padding-left: 22px;
+  margin: 0;
+}
+.track-item{
+  padding: 16px 10px;
+  text-align: center;
+}
+.track-item + .track-item{
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.track-name{
+  font-size: 1.2rem;
+}
+.track-meta{
+  margin-top: 6px;
+}
+.tracklist{
+  list-style: decimal;
+  padding-left: 26px;
+  margin: 0;
+}
+
+.track{
+  padding: 14px 12px;
+}
+
+.track + .track{
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+/* zebra */
+.tracklist.zebra .track:nth-child(even){
+  background: rgba(0,0,0,0.03);
+}
+
+.track-title{
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.track-credits{
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column; /* ←追加 */
+  gap: 2px;               /* ←縦の間隔に */
+}
+
+.track-credits{
+  font-size: .95rem;
+  line-height: 1.5;
+}
+.track-credits div{ margin-top: 2px; }
+.track-credits div:first-child{ margin-top: 0; }
+
+.artist-link{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+}
+
+/* ===== Artist list ===== */
+
+.artist-links{
+  display:block;
+}
+
+.artist-links a{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  padding:14px 18px;
+  border-bottom:1px solid #ddd;
+}
+
+.artist-links a:nth-child(even){
+  background:#fafafa;
+}
+
+.artist-links a:nth-child(odd){
+  background:#fff;
+}
+
+/* ===== Artist count ===== */
+
+.artist-count{
+  margin-left:8px;
+  font-size:1rem;
+  color:#555;
+  background:#fff;
+  border:1px solid #bbb;
+  border-radius:999px;
+  padding:3px 9px;
+  line-height:1;
+}
+
+.artist-links a:hover{
+  background:#f5f5f5;
+}
+.song-top{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.song-meta-block p{
+  margin: 0 0 8px;
+}
+
+.song-key{
+  margin-top: 18px;
+}
+
+.toggle-chords{
+  margin-top: 12px;
+}
+
+
+
+@media (max-width: 768px){
+  .song-top{
+    grid-template-columns: 1fr;
+  }
+}
+.spotify-block{
+  margin-top: 12px;
+  margin-right: 16px;
+  margin-bottom: 26px;
+}
+.share-x{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.share-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid #cfcfcf;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #222;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.share-btn:hover{
+  background: #f8f8f8;
+  border-color: #bdbdbd;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  transform: translateY(-1px);
+}
+
+.share-btn:active{
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.share-btn svg{
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.share-btn span{
+  letter-spacing: 0.02em;
+}
+
+.song-header{
+  display:flex;
+  align-items:flex-start;
+  gap:40px;
+}
+
+.artist-count.zero{
+  opacity:0.45;
+}
+.artist-link.no-songs{
+  pointer-events:none;
+  color:#888;
+  text-decoration:none;
+}
+.search-area{
+  position: relative;
+}
+
+#site-search{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.search-results{
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.search-results-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-result-item + .search-result-item{
+  border-top: 1px solid #eee;
+}
+
+.search-result-link{
+  display: block;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-result-link:hover{
+  background: #f5f5f5;
+}
+
+.search-song-title{
+  display: block;
+  font-size: 14px;
+}
+
+.search-song-artist{
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.search-message{
+  margin: 0;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #666;
+}
+body[data-page="search"] .nav-search{
+  display:none;
+}
+.search-page-result{
+  display:block;
+  padding:16px 18px;
+  border-bottom:1px solid #e5e5e5;
+  text-decoration:none;
+  color:inherit;
+}
+.search-page-result:nth-child(even){
+  background:#fafafa;
+}
+.search-page-result:hover{
+  background:#f0f0f0;
+  transition:background .15s ease;
+}
+.search-page-result-title{
+  font-size:18px;
+  margin:0 0 4px 0;
+}
+
+.search-page-result-artist{
+  font-size:14px;
+  color:#777;
+  margin:0;
+}
+.search-page-result{
+  transition:all .15s ease;
+}
+
+.search-page-result:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+.search-page-result-title{
+  font-weight:400;
+}
+.search-results{
+  background:transparent;
+  border:none;
+  box-shadow:none;
+  padding:0;
+}
+#search-query{
+  font-size:26px;
+  font-weight:400;
+  margin-bottom:4px;
+}
+
+#search-count{
+  font-size:14px;
+  color:#777;
+  margin-bottom:18px;
+}
+#search-page-input{
+  width:360px;
+  height:40px;
+  font-size:16px;
+  padding:0 16px;
+  border-radius:20px;
+}
+.search-page-form button{
+  height:40px;
+  padding:0 16px;
+  margin-left:8px;
+  border-radius:18px;
+  border:1px solid #ddd;
+  background:#f3f3f3;
+  cursor:pointer;
+}
+.search-page-form button:hover{
+  background:#e9e9e9;
+}
+strong{
+  font-weight:600;
+}
+.search-result-link.selected {
+  background:#eaeaea;
+  box-shadow: inset 0 0 0 2px #d0d0d0, 0 4px 10px rgba(0,0,0,0.10);
+}
+.search-area {
+  flex: 0 0 360px;
+}
+.search-area {
+  position: relative;
+}
+
+#site-search {
+  width: 100%;
+  padding: 10px 34px 10px 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.search-area::after {
+  content: "🔍";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+mark{
+  background:transparent;
+  font-weight:600;
+}
+.dg-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr 2fr;
+  gap: 8px;
+}
+
+.dg-cell {
+  min-width: 0;
+}
+
+.dg-cell:nth-child(3) {
+  white-space: normal;
+  word-break: break-word;
+}
+/* ===== new song-features ===== */
+.song-features {
+  margin-top: 16px;
+  padding: 10px 0;
+  opacity: 0.9;
+  position: relative;
+}
+
+.song-features::before {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-bottom: 10px;
+}
+
+.song-features::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-top: 10px;
+}
+
+.song-features p {
+  margin: 6px 0;
+}
+
+.song-features a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0,0,0,0.2);
+}
+
+.song-features a:hover {
+  opacity: 0.7;
+}
+
+.song-features em {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.song-features .features-label {
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+.song-features::before,
+.song-features::after {
+  display: none;
+}
+.meta {
+  opacity: 0.6;
+  font-size: 0.95em;
+}
+.tracklist.zebra li:nth-child(even) {
+  background: rgba(0,0,0,0.03);
+}
+.tag-list {
+  list-style: none;
+  padding-left: 0;
+}
+.tag-list li {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tag-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.tag-list .list {
+  margin-top: 28px;
+}
+
+.tag-list .list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  text-decoration: none;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.tag-list .list-item:nth-child(even) {
+  background: #f7f7f7;
+}
+
+.tag-list .name {
+  display: block;
+}
+
+.tag-list .count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+}
+.tags {
+  margin-top: 12px; 
+}
+.tags a {
+  font-size: 0.9rem;
+  color: #666;
+}
+.tags {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.tags .label,
+.tags .tag-links {
+  display: inline;
+}
+
+.tags .tag-links a {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tags .tag-links em {
+  font-style: italic;
+}
+.song-tags {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  display: block !important;
+  width: auto !important;
+  white-space: normal !important;
+}
+
+.song-tags-label {
+  display: inline !important;
+  margin-right: 6px;
+}
+
+.song-tags a {
+  display: inline !important;
+  width: auto !important;
+  float: none !important;
+  clear: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0,0,0,0.2);
+}
+
+.song-tags em {
+  display: inline !important;
+  font-style: italic;
+}
+.song-meta-block {
+  flex: 1;
+  min-width: 0;
+}
+.song-meta-block {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.song-tags {
+  display: block;
+  width: 100%;
+  white-space: normal;
+}
+
+.song-tags-label,
+.song-tags a,
+.song-tags em {
+  display: inline;
+}
+.tags {
+  display: block;
+  width: 100%;
+  white-space: normal;
+}
+
+.tags .label,
+.tags a,
+.tags em {
+  display: inline;
+}
+.list-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "name count"
+    "desc count";
+  row-gap: 6px;
+  align-items: center;
+}
+
+.list-item .name {
+  grid-area: name;
+}
+
+.list-item .artist-count {
+  grid-area: count;
+  align-self: center;
+}
+
+.list-item .tag-desc {
+  grid-area: desc;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+}
+.modulation-note {
+  color: red !important;
+  font-size: 40px !important;
+  margin-left: 40px !important;
+}
