@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gifnof</title>
+
+  <!-- ===== GLOBAL CSS (絶対共通) ===== -->
+  <link rel="stylesheet" href="../../css/style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  <!-- ===== GLOBAL JS (絶対共通) ===== -->
+<script defer src="../../js/global.js"></script>
+<script defer src="../../js/main.js"></script>
+</head>
+
+<body>
+
+<!-- ===================================================
+     🚫 ここから上は触らない（GLOBAL HEAD）
+=================================================== -->
+
+
+<!-- ===================================================
+     🚫 SITE HEADER（全ページ固定）
+=================================================== -->
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand-block">
+      <a class="logo" href="../../index.html">Gifnof</a>
+      <p class="tagline">Discover the new and explore the nostalgic trends</p>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="container nav-row">
+    <div class="nav-links">
+      <a href="#" id="artistToggle">ARTIST LIST</a>
+      <a href="#" id="rankToggle">YEARLY RANKINGS</a>
+      <a href="/tags/index.html">TAGS</a>
+      <a href="#" id="columnToggle">COLUMN</a>
+    </div>
+
+<section class="nav-search search-area">
+  <input
+    type="search"
+    id="site-search"
+    placeholder="Search songs, artists, composers..."
+    autocomplete="off"
+  />
+  <div id="search-results" class="search-results"></div>
+</section>
+
+      </div>
+    </nav>
+
+<!-- panels -->
+
+<!-- ===== Artist A–Z Panel ===== -->
+<section id="artist-panel" class="artist-panel" aria-hidden="true">
+  <div class="container">
+    <div class="artist-az">
+  <a href="/artists/a.html">A</a>
+  <a href="/artists/b.html">B</a>
+  <a href="/artists/c.html">C</a>
+  <a href="/artists/d.html">D</a>
+  <a href="/artists/e.html">E</a>
+  <a href="/artists/f.html">F</a>
+  <a href="/artists/g.html">G</a>
+  <a href="/artists/h.html">H</a>
+  <a href="/artists/i.html">I</a>
+  <a href="/artists/j.html">J</a>
+  <a href="/artists/k.html">K</a>
+  <a href="/artists/l.html">L</a>
+  <a href="/artists/m.html">M</a>
+  <a href="/artists/n.html">N</a>
+  <a href="/artists/o.html">O</a>
+  <a href="/artists/p.html">P</a>
+  <a href="/artists/q.html">Q</a>
+  <a href="/artists/r.html">R</a>
+  <a href="/artists/s.html">S</a>
+  <a href="/artists/t.html">T</a>
+  <a href="/artists/u.html">U</a>
+  <a href="/artists/v.html">V</a>
+  <a href="/artists/w.html">W</a>
+  <a href="/artists/x.html">X</a>
+  <a href="/artists/y.html">Y</a>
+  <a href="/artists/z.html">Z</a>
+</div>
+  </div>
+</section>
+
+<!-- ===== Yearly Rankings Panel ===== -->
+<section id="rank-panel" class="artist-panel" aria-hidden="true">
+  <div class="container">
+    <div class="year-grid" aria-label="Yearly rankings 1980 to 1999">
+    <a href="/rankings/1980.html">'80</a>
+    <a href="/rankings/1981.html">'81</a>
+    <a href="/rankings/1982.html">'82</a>
+    <a href="/rankings/1983.html">'83</a>
+    <a href="/rankings/1984.html">'84</a>
+    <a href="/rankings/1985.html">'85</a>
+    <a href="/rankings/1986.html">'86</a>
+    <a href="/rankings/1987.html">'87</a>
+    <a href="/rankings/1988.html">'88</a>
+    <a href="/rankings/1989.html">'89</a>
+    <a href="/rankings/1990.html">'90</a>
+    <a href="/rankings/1991.html">'91</a>
+    <a href="/rankings/1992.html">'92</a>
+    <a href="/rankings/1993.html">'93</a>
+    <a href="/rankings/1994.html">'94</a>
+    <a href="/rankings/1995.html">'95</a>
+    <a href="/rankings/1996.html">'96</a>
+    <a href="/rankings/1997.html">'97</a>
+    <a href="/rankings/1998.html">'98</a>
+    <a href="/rankings/1999.html">'99</a>
+  </div>
+  </div>
+</section>
+
+<!-- ===== Column Panel ===== -->
+<section id="column-panel" class="artist-panel" aria-hidden="true">
+  <div class="container">
+    <div class="column-grid" aria-label="Column categories">
+      <a href="../../column/guides/naming.html">Guides</a>
+      <a href="../../column/essays/index.html">Essays</a>
+      <a href="../../column/deep-dive/index.html">Deep Dive</a>
+      <a href="../../column/notes/index.html">Notes</a>
+      <a class="column-grid__all" href="../../column/index.html">All Columns →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     ✅ ここからだけ編集OK
+=================================================== -->
+
+<main class="container">
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">HOME</a>
+  <span class="sep">›</span>
+  <span class="crumb">COLUMN</span>
+  <span class="sep">›</span>
+  <a href="/column/essays/index.html">ESSAYS</a>
+  <span class="sep">›</span>
+  <span aria-current="page">GLAY</span>
+</nav>
+  </div>
+
+  <div class="page-body">
+
+    <h1 class="page-title">GLAY, A Place I Call Home</h1>
+    <p class="muted">
+      A story of growing up with GLAY, drifting apart, and finding my way back.
+    </p>
+
+    <article class="column-article">
+
+      <p>
+In the 1990s, CDs sold in unimaginable numbers in Japan.
+Music was everywhere. Before the internet, before streaming, before algorithms — music was something you discovered through television, magazines, and word of mouth. When you bought a CD, you held it in your hands. The cover, the lyric booklet, the smell of the paper — it all became part of the memory.
+
+This site begins with GLAY.
+
+There were artists who sold more records. That’s true.
+But when talking about the late ’90s in Japan, GLAY is impossible to ignore.
+
+This is the story of how I grew up with them.
+      </p>
+
+
+
+      <h2>The Beginning of GLAY</h2>
+
+      <p>
+TAKURO and TERU, the band’s leader and vocalist, were high school classmates in Hakodate. HISASHI attended a different school, and JIRO was one year younger.
+
+Interestingly, TERU originally played drums. When TAKURO asked him to record vocals for a demo tape, he was struck by TERU’s voice — and just like that, TERU became the singer.
+
+TAKURO believed two guitarists would create a stronger sound, so HISASHI joined. They built their reputation in their hometown before moving to Tokyo after graduation, chasing success in music.
+
+JIRO would follow a year later.
+      </p>
+
+      <h2>Tokyo and the Difficult Years</h2>
+
+      <p>
+Success in music is never guaranteed.
+
+In Hakodate, they had recognition. In Tokyo, they struggled.
+
+They worked regular jobs to survive. Members left. Doubt crept in. At one point, TAKURO called TERU to say he might return to Hakodate. TERU, normally calm and quiet, responded firmly:
+“If you’re going back, go. But I’m staying here.”
+
+That moment kept GLAY alive.
+
+Eventually JIRO reconnected with the band. His own group was falling apart, and TAKURO invited him to join. At last, GLAY’s core lineup was complete.
+      </p>
+
+      <h2>A Major Debut Backed by a Legend</h2>
+
+      <p>
+One night after a live show, the members noticed someone familiar in the audience: YOSHIKI of X JAPAN.
+
+He offered them a debut under his label.
+
+Recording took place in Los Angeles under YOSHIKI’s strict direction. TERU endured take after take without complaint. Later, YOSHIKI admitted that if TERU had given up, the debut offer would have been withdrawn.
+
+Their debut album, Hai to Diamond, was released. It received strong promotion.
+
+But it did not sell well.
+      </p>
+
+      <h2>Finding Their Own Sound</h2>
+
+      <p>
+Their second album, SPEED POP, marked a shift. With less direct involvement from YOSHIKI, GLAY began shaping their own identity. Producer Masahide Sakuma joined, beginning a long partnership.
+
+The album entered the Top 10 — a small but significant breakthrough.
+
+Then came BEAT out! in 1996.
+
+This album solidified the GLAY sound. Veteran drummer Toshimitsu Nagai joined as a support member, and from that point forward, he became an essential part of their rhythm.
+
+The album sold 800,000 copies.
+
+Later that year, they released BELOVED — their first million-selling album.
+
+GLAY had arrived.
+
+Songs like “Glorious,” “BELOVED,” and “SHUTTER SPEEDS no Theme” defined an era. TAKURO’s lyrics were poetic, delicate, and deeply emotional. Even today, those songs feel timeless.
+      </p>
+
+      <h2>And Then, a Legend</h2>
+
+      <p>
+        Then came the best-of album.
+
+It felt too early. I even thought so at the time.
+
+I was wrong.
+
+It shipped 4.8 million copies.
+
+Shortly after, B’z released two best albums that sold a combined 10 million. The late ’90s in Japan were a surreal time for music sales.
+
+GLAY’s momentum continued with massive singles and, in 1999, GLAY EXPO — a concert that drew approximately 200,000 people.
+
+Two hundred thousand.
+
+It remains one of the largest concerts ever held by a single act in Japan.
+
+As a middle school student at the time, I picked up a guitar and formed a band with friends. TAKURO’s lyrics shaped my emotions during those formative years.
+
+That concert, that era — it felt invincible.
+      </p>
+
+      <h2>My Distance from GLAY</h2>
+
+      <p>
+Then came pure soul.
+
+Ironically, this album is one of my favorites.
+
+“Winter, again” became their biggest hit. The band was at its commercial peak.
+
+But their next album, HEAVY GAUGE, marked a shift for me. The album versions of singles felt different — sometimes less powerful than the originals. At the same time, my own musical tastes were growing heavier, more aggressive.
+
+I drifted away.
+
+They didn’t change.
+
+I did.
+      </p>
+
+      <h2>Returning Home</h2>
+
+      <p>
+Years passed.
+
+Then one day, a commercial appeared for BEST OF GLAY REVIEW II. The song in the ad was “BELOVED.”
+
+In an instant, I was back in middle school.
+
+I bought the album. I listened to fill the gap of those missing years.
+
+And I realized something:
+
+GLAY had always been GLAY.
+
+They were constant.
+
+Like a hometown you can always return to.
+
+You may leave. You may grow.
+But when you go back, it still feels like home.
+
+GLAY is that place for me.
+      </p>
+
+      <p>
+        GLAY had always been GLAY. They were constant. Like a hometown you can always return to.
+      </p>
+
+    </article>
+
+  </div>
+</main>
+
+<!-- ===================================================
+     🚫 FOOTER（全ページ固定）
+=================================================== -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h4>About Us</h4>
+      <p class="muted">
+        We are dedicated to showcasing chord progressions of old Japanese pop songs.
+      </p>
+    </div>
+
+    <div>
+      <p class="muted">© JP Chord Degree</p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

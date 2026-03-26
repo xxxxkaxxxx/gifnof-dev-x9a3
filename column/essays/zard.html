@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gifnof</title>
+
+  <!-- ===== GLOBAL CSS (絶対共通) ===== -->
+  <link rel="stylesheet" href="../../css/style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  <!-- ===== GLOBAL JS (絶対共通) ===== -->
+<script defer src="../../js/global.js"></script>
+<script defer src="../../js/main.js"></script>
+</head>
+
+<body>
+
+<!-- ===================================================
+     🚫 ここから上は触らない（GLOBAL HEAD）
+=================================================== -->
+
+
+<!-- ===================================================
+     🚫 SITE HEADER（全ページ固定）
+=================================================== -->
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand-block">
+      <a class="logo" href="../../index.html">Gifnof</a>
+      <p class="tagline">Discover the new and explore the nostalgic trends</p>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="container nav-row">
+    <div class="nav-links">
+      <a href="#" id="artistToggle">ARTIST LIST</a>
+      <a href="#" id="rankToggle">YEARLY RANKINGS</a>
+      <a href="/tags/index.html">TAGS</a>
+      <a href="#" id="columnToggle">COLUMN</a>
+    </div>
+
+<section class="nav-search search-area">
+  <input
+    type="search"
+    id="site-search"
+    placeholder="Search songs, artists, composers..."
+    autocomplete="off"
+  />
+  <div id="search-results" class="search-results"></div>
+</section>
+
+      </div>
+    </nav>
+
+<!-- panels -->
+
+<!-- ===== Artist A–Z Panel ===== -->
+<section id="artist-panel" class="artist-panel" aria-hidden="true">
+  <div class="container">
+    <div class="artist-az">
+  <a href="/artists/a.html">A</a>
+  <a href="/artists/b.html">B</a>
+  <a href="/artists/c.html">C</a>
+  <a href="/artists/d.html">D</a>
+  <a href="/artists/e.html">E</a>
+  <a href="/artists/f.html">F</a>
+  <a href="/artists/g.html">G</a>
+  <a href="/artists/h.html">H</a>
+  <a href="/artists/i.html">I</a>
+  <a href="/artists/j.html">J</a>
+  <a href="/artists/k.html">K</a>
+  <a href="/artists/l.html">L</a>
+  <a href="/artists/m.html">M</a>
+  <a href="/artists/n.html">N</a>
+  <a href="/artists/o.html">O</a>
+  <a href="/artists/p.html">P</a>
+  <a href="/artists/q.html">Q</a>
+  <a href="/artists/r.html">R</a>
+  <a href="/artists/s.html">S</a>
+  <a href="/artists/t.html">T</a>
+  <a href="/artists/u.html">U</a>
+  <a href="/artists/v.html">V</a>
+  <a href="/artists/w.html">W</a>
+  <a href="/artists/x.html">X</a>
+  <a href="/artists/y.html">Y</a>
+  <a href="/artists/z.html">Z</a>
+</div>
+  </div>
+</section>
+
+<!-- ===== Yearly Rankings Panel ===== -->
+<section id="rank-panel" class="artist-panel" aria-hidden="true">
+  <div class="container">
+    <div class="year-grid" aria-label="Yearly rankings 1980 to 1999">
+    <a href="/rankings/1980.html">'80</a>
+    <a href="/rankings/1981.html">'81</a>
+    <a href="/rankings/1982.html">'82</a>
+    <a href="/rankings/1983.html">'83</a>
+    <a href="/rankings/1984.html">'84</a>
+    <a href="/rankings/1985.html">'85</a>
+    <a href="/rankings/1986.html">'86</a>
+    <a href="/rankings/1987.html">'87</a>
+    <a href="/rankings/1988.html">'88</a>
+    <a href="/rankings/1989.html">'89</a>
+    <a href="/rankings/1990.html">'90</a>
+    <a href="/rankings/1991.html">'91</a>
+    <a href="/rankings/1992.html">'92</a>
+    <a href="/rankings/1993.html">'93</a>
+    <a href="/rankings/1994.html">'94</a>
+    <a href="/rankings/1995.html">'95</a>
+    <a href="/rankings/1996.html">'96</a>
+    <a href="/rankings/1997.html">'97</a>
+    <a href="/rankings/1998.html">'98</a>
+    <a href="/rankings/1999.html">'99</a>
+  </div>
+  </div>
+</section>
+
+<!-- ===== Column Panel ===== -->
+<section id="column-panel" class="artist-panel" aria-hidden="true">
+  <div class="container">
+    <div class="column-grid" aria-label="Column categories">
+      <a href="../../column/guides/naming.html">Guides</a>
+      <a href="../../column/essays/index.html">Essays</a>
+      <a href="../../column/deep-dive/index.html">Deep Dive</a>
+      <a href="../../column/notes/index.html">Notes</a>
+      <a class="column-grid__all" href="../../column/index.html">All Columns →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     ✅ ここからだけ編集OK
+=================================================== -->
+
+<main class="container">
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">HOME</a>
+  <span class="sep">›</span>
+  <span class="crumb">COLUMN</span>
+  <span class="sep">›</span>
+  <a href="/column/essays/index.html">ESSAYS</a>
+  <span class="sep">›</span>
+  <span aria-current="page">ZARD</span>
+</nav>
+  </div>
+
+  <div class="page-body">
+
+    <h1 class="page-title">ZARD, The Queen of the 1990s</h1>
+    <p class="muted">
+      A voice from the 90s that still echoes in my life.
+    </p>
+
+    <article class="column-article">
+
+
+<p>
+The 1990s saw the rise of a wide variety of artists.  
+Singer-songwriters, bands, idols—there was an incredible diversity in style and form.
+</p>
+
+<p>
+But as is true in any era, success is never guaranteed.
+</p>
+
+<p>
+Some artists debut, only to fade into obscurity.  
+Some shine briefly with a single hit before disappearing.  
+Others achieve a few successes, yet are eventually swept away by time.
+</p>
+
+<p>
+To survive as an artist is, without question, an incredibly difficult challenge.
+</p>
+
+<p>
+And yet, in such a competitive world, there are those who not only created numerous hit songs but also left a lasting mark on people’s memories.  
+ZARD is one of them.
+</p>
+
+<h3>Early Days</h3>
+
+<p>
+ZARD originally began as a group name, a band centered around vocalist Izumi Sakai.
+</p>
+
+<p>
+However, the structure soon changed.  
+ZARD gradually evolved into a solo project led by Sakai.
+</p>
+
+<p>
+This shift proved to be a major turning point, as she quickly rose to the forefront of the era.
+</p>
+
+<p>
+Their debut single, <em>“Good-bye My Loneliness”</em>,  
+was tied to a television drama and sold around 200,000 copies.
+</p>
+
+<p>
+The song was composed by Tetsuro Oda, who would later play a key role in many of ZARD’s hits.  
+Masahiro Kuribayashi was also involved, and together they formed the core of ZARD’s sound.
+</p>
+
+<p>
+In other words, the foundation of ZARD’s musical identity was already established from the very beginning.
+</p>
+
+<p>
+Arrangers such as Takeshi Hayama and Masao Akashi also contributed,  
+and their names continued to appear in album credits throughout ZARD’s peak years.
+</p>
+
+<p>
+By their second album, songs like <em>“Fushigi ne…”</em> and <em>“Mou Sagasanai”</em>  
+already showcased what would become the signature ZARD sound.  
+The album eventually surpassed 300,000 copies in sales.
+</p>
+
+<h3>Million-Selling Era</h3>
+
+<p>
+Following the success of their previous work,  
+ZARD released their third album, <em>HOLD ME</em>.
+</p>
+
+<p>
+Tracks like <em>“Nemurenai Yoru wo Daite”</em> and <em>“Ano Hohoemi wo Wasurenai de”</em>  
+highlight their signature pop style.
+</p>
+
+<p>
+Songs such as <em>“Konna ni Aishitemo”</em> echo earlier works,  
+while consistently expressing relatable themes of love.
+</p>
+
+<p>
+One standout is <em>“Tooi Hi no Nostalgia”</em>.  
+Its opening piano and melancholic minor IV chord evoke a deep sense of distant memories.
+</p>
+
+<p>
+Though not composed by Oda or Kuribayashi,  
+the song still carries the unmistakable ZARD sound,  
+thanks to arranger Masao Akashi.
+</p>
+
+<p>
+From this album onward, ZARD achieved six consecutive million-selling records.
+</p>
+
+<h3>Signature Songs</h3>
+
+<p>
+In 1993, the album <em>Yureru Omoi</em> was released,  
+featuring what would become ZARD’s defining songs.
+</p>
+
+<p>
+The title track was used in a commercial,  
+and its refreshing sound perfectly matched the product’s image.
+</p>
+
+<p>
+Then there is <em>“Makenaide”</em>,  
+widely recognized as one of Japan’s greatest cheer songs.
+</p>
+
+<p>
+Personally, I would place it alongside  
+<em>“Nandodemo”</em> by DREAMS COME TRUE and  
+<em>“Tomorrow”</em> by Mayo Okamoto.
+</p>
+
+<p>
+Both songs were composed by Tetsuro Oda,  
+further highlighting his central role in ZARD’s success.
+</p>
+
+<p>
+Their next album, <em>OH MY LOVE</em>,  
+was created by a powerful team of Oda and Kuribayashi,  
+with all arrangements handled by Akashi.  
+It went on to surpass two million copies in sales.
+</p>
+
+<h3>Continued Momentum</h3>
+
+<p>
+ZARD’s momentum continued in the following years.
+</p>
+
+<p>
+On <em>forever you</em>, Kuribayashi delivered notable work,  
+including <em>“High Heel wo Nugisutete”</em>,  
+a beautifully structured heartbreak song.
+</p>
+
+<p>
+Albums like <em>TODAY IS ANOTHER DAY</em> and <em>Eien</em>  
+featured numerous anime tie-ins.
+</p>
+
+<p>
+<em>“DAN DAN Kokoro Hikareteku”</em>,  
+used in <em>Dragon Ball GT</em>,  
+features a powerful ♭VI–♭VII–I progression.
+</p>
+
+<p>
+<em>“Unmei no Roulette Mawashite”</em>  
+was used in <em>Detective Conan</em>,  
+further expanding ZARD’s reach.
+</p>
+
+<p>
+ZARD’s music connected with all audiences—  
+through love songs, encouragement, and anime themes alike.
+</p>
+
+<h3>The End</h3>
+
+<p>
+After this period of success, album sales began to decline.
+</p>
+
+<p>
+As the 2000s arrived, music trends shifted,  
+and ZARD’s pop-oriented sound gradually fell out of sync with the times.
+</p>
+
+<p>
+The rise of digital distribution also weakened the CD market,  
+creating challenges for many artists.
+</p>
+
+<p>
+ZARD was no exception.
+</p>
+
+<p>
+Eventually, Izumi Sakai passed away during her battle with illness.
+</p>
+
+<h3>A Symbol of an Era</h3>
+
+<p>
+Within just ten years, ZARD became a household name.
+</p>
+
+<p>
+Even now, songs like <em>“Yureru Omoi”</em> and <em>“Makenaide”</em>  
+continue to stay with me.
+</p>
+
+<p>
+Had she lived, what kind of music would she have created today?  
+We will never know.
+</p>
+
+<p>
+But ZARD’s music will always remain a part of my playlist.
+</p>
+
+
+    </article>
+
+  </div>
+</main>
+
+<!-- ===================================================
+     🚫 FOOTER（全ページ固定）
+=================================================== -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h4>About Us</h4>
+      <p class="muted">
+        We are dedicated to showcasing chord progressions of old Japanese pop songs.
+      </p>
+    </div>
+
+    <div>
+      <p class="muted">© JP Chord Degree</p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

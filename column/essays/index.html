@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gifnof</title>
+
+  <!-- ===== GLOBAL CSS (絶対共通) ===== -->
+  <link rel="stylesheet" href="../../css/style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  <!-- ===== GLOBAL JS (絶対共通) ===== -->
+<script defer src="../../js/global.js"></script>
+<script defer src="../../js/main.js"></script>
+</head>
+
+<body>
+
+<!-- ===================================================
+     🚫 ここから上は触らない（GLOBAL HEAD）
+=================================================== -->
+
+
+<!-- ===================================================
+     🚫 SITE HEADER（全ページ固定）
+=================================================== -->
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand-block">
+      <a class="logo" href="../../index.html">Gifnof</a>
+      <p class="tagline">Discover the new and explore the nostalgic trends</p>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="container nav-row">
+    <div class="nav-links">
+      <a href="#" id="artistToggle">ARTIST LIST</a>
+      <a href="#" id="rankToggle">YEARLY RANKINGS</a>
+      <a href="/tags/index.html">TAGS</a>
+      <a href="#" id="columnToggle">COLUMN</a>
+    </div>
+
+<section class="nav-search search-area">
+  <input
+    type="search"
+    id="site-search"
+    placeholder="Search songs, artists, composers..."
+    autocomplete="off"
+  />
+  <div id="search-results" class="search-results"></div>
+</section>
+
+      </div>
+    </nav>
+
+<!-- panels -->
+
+<!-- ===== Artist A–Z Panel ===== -->
+<section id="artist-panel" class="artist-panel" aria-hidden="true">
+  <div class="container">
+    <div class="artist-az">
+  <a href="/artists/a.html">A</a>
+  <a href="/artists/b.html">B</a>
+  <a href="/artists/c.html">C</a>
+  <a href="/artists/d.html">D</a>
+  <a href="/artists/e.html">E</a>
+  <a href="/artists/f.html">F</a>
+  <a href="/artists/g.html">G</a>
+  <a href="/artists/h.html">H</a>
+  <a href="/artists/i.html">I</a>
+  <a href="/artists/j.html">J</a>
+  <a href="/artists/k.html">K</a>
+  <a href="/artists/l.html">L</a>
+  <a href="/artists/m.html">M</a>
+  <a href="/artists/n.html">N</a>
+  <a href="/artists/o.html">O</a>
+  <a href="/artists/p.html">P</a>
+  <a href="/artists/q.html">Q</a>
+  <a href="/artists/r.html">R</a>
+  <a href="/artists/s.html">S</a>
+  <a href="/artists/t.html">T</a>
+  <a href="/artists/u.html">U</a>
+  <a href="/artists/v.html">V</a>
+  <a href="/artists/w.html">W</a>
+  <a href="/artists/x.html">X</a>
+  <a href="/artists/y.html">Y</a>
+  <a href="/artists/z.html">Z</a>
+</div>
+  </div>
+</section>
+
+<!-- ===== Yearly Rankings Panel ===== -->
+<section id="rank-panel" class="artist-panel" aria-hidden="true">
+  <div class="container">
+    <div class="year-grid" aria-label="Yearly rankings 1980 to 1999">
+    <a href="/rankings/1980.html">'80</a>
+    <a href="/rankings/1981.html">'81</a>
+    <a href="/rankings/1982.html">'82</a>
+    <a href="/rankings/1983.html">'83</a>
+    <a href="/rankings/1984.html">'84</a>
+    <a href="/rankings/1985.html">'85</a>
+    <a href="/rankings/1986.html">'86</a>
+    <a href="/rankings/1987.html">'87</a>
+    <a href="/rankings/1988.html">'88</a>
+    <a href="/rankings/1989.html">'89</a>
+    <a href="/rankings/1990.html">'90</a>
+    <a href="/rankings/1991.html">'91</a>
+    <a href="/rankings/1992.html">'92</a>
+    <a href="/rankings/1993.html">'93</a>
+    <a href="/rankings/1994.html">'94</a>
+    <a href="/rankings/1995.html">'95</a>
+    <a href="/rankings/1996.html">'96</a>
+    <a href="/rankings/1997.html">'97</a>
+    <a href="/rankings/1998.html">'98</a>
+    <a href="/rankings/1999.html">'99</a>
+  </div>
+  </div>
+</section>
+
+<!-- ===== Column Panel ===== -->
+<section id="column-panel" class="artist-panel" aria-hidden="true">
+  <div class="container">
+    <div class="column-grid" aria-label="Column categories">
+      <a href="../../column/guides/naming.html">Guides</a>
+      <a href="../../column/essays/index.html">Essays</a>
+      <a href="../../column/deep-dive/index.html">Deep Dive</a>
+      <a href="../../column/notes/index.html">Notes</a>
+      <a class="column-grid__all" href="../../column/index.html">All Columns →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     ✅ ここからだけ編集OK
+=================================================== -->
+
+<main class="container">
+
+  <div class="page-head">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">HOME</a>
+      <span class="sep">›</span>
+      <span class="crumb">COLUMN</span>
+      <span class="sep">›</span>
+      <span aria-current="page">ESSAYS</span>
+    </nav>
+  </div>
+
+  <div class="page-body">
+
+    <h1 class="page-title">Essays</h1>
+    <p class="muted">Personal reflections and musical memories.</p>
+
+<section class="column-list">
+
+  <article class="column-item">
+    <h3>
+      <a href="/column/essays/glay.html">
+        GLAY, A Place I Call Home
+      </a>
+    </h3>
+    <p>
+      A story of growing up with GLAY, drifting apart, and finding my way back.
+    </p>
+  </article>
+
+  <article class="column-item">
+    <h3>
+      <a href="/column/essays/zard.html">
+        ZARD, The Queen of the 1990s
+      </a>
+    </h3>
+    <p>
+      A voice from the 90s that still echoes in my life.
+    </p>
+  </article>
+
+</section>
+
+  </div>
+</main>
+
+<!-- ===================================================
+     🚫 FOOTER（全ページ固定）
+=================================================== -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h4>About Us</h4>
+      <p class="muted">
+        We are dedicated to showcasing chord progressions of old Japanese pop songs.
+      </p>
+    </div>
+
+    <div>
+      <p class="muted">© JP Chord Degree</p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
