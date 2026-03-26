@@ -717,7 +717,7 @@ const tagLabels = {
   "diatonic-only":"Diatonic Only"
 };
 
-fetch('${BASE_PATH}songs.json')
+fetch(`${BASE_PATH}songs.json`)
   .then(response => response.json())
   .then(songs => {
     const tagCounts = {};
