@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Gifnof - Discover the new and explore the nostalgic trends</title>
+
+    <link rel="stylesheet" href="css/style.css?v=20260222-1" />
+<script defer src="js/global.js"></script>
+<script defer src="js/main.js"></script>
+
+    <!-- Google Fonts: Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+  </head>
+
+  <body data-page="home">
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+      <div class="container">
+        <div class="brand-block">
+          <a class="logo" href="index.html">Gifnof</a>
+          
+          <p class="tagline">Digging into J-POP: chord progressions, songs, and stories.</p>
+          <div class="stats">
+  🎧 Songs: <span id="song-count">0</span><br>
+  🏷 Tags: <span id="tag-count">0</span>
+</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Nav ===== -->
+<nav class="main-nav">
+  <div class="container nav-row">
+    <div class="nav-links">
+      <a href="#" id="artistToggle" aria-controls="artist-panel" aria-expanded="false">ARTIST LIST</a>
+      <a href="#" id="rankToggle" aria-controls="rank-panel" aria-expanded="false">YEARLY RANKINGS</a>
+      <a href="/tags/index.html">TAGS</a>
+      <a href="#" id="columnToggle" aria-controls="column-panel" aria-expanded="false">COLUMN</a>
+    </div>
+
+<section class="nav-search search-area">
+  <input
+    type="search"
+    id="site-search"
+    placeholder="Search songs, artists, composers..."
+    autocomplete="off"
+  />
+  <div id="search-results" class="search-results"></div>
+</section>
+
+      </div>
+    </nav>
+
+    <!-- ===== Artist A–Z Panel ===== -->
+    <section id="artist-panel" class="artist-panel" aria-hidden="true">
+      <div class="container">
+        <div class="artist-az">
+<a href="./artists/a.html">A</a>
+<a href="./artists/b.html">B</a>
+<a href="./artists/c.html">C</a>
+<a href="./artists/d.html">D</a>
+<a href="./artists/e.html">E</a>
+<a href="./artists/f.html">F</a>
+<a href="./artists/g.html">G</a>
+<a href="./artists/h.html">H</a>
+<a href="./artists/i.html">I</a>
+<a href="./artists/j.html">J</a>
+<a href="./artists/k.html">K</a>
+<a href="./artists/l.html">L</a>
+<a href="./artists/m.html">M</a>
+<a href="./artists/n.html">N</a>
+<a href="./artists/o.html">O</a>
+<a href="./artists/p.html">P</a>
+<a href="./artists/q.html">Q</a>
+<a href="./artists/r.html">R</a>
+<a href="./artists/s.html">S</a>
+<a href="./artists/t.html">T</a>
+<a href="./artists/u.html">U</a>
+<a href="./artists/v.html">V</a>
+<a href="./artists/w.html">W</a>
+<a href="./artists/x.html">X</a>
+<a href="./artists/y.html">Y</a>
+<a href="./artists/z.html">Z</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="rank-panel" class="artist-panel" aria-hidden="true">
+      <div class="container">
+        <div class="year-grid" aria-label="Yearly rankings 1980 to 1999">
+         <a href="rankings-1980.html">'80</a><a href="rankings-1981.html">'81</a><a href="rankings-1982.html">'82</a><a href="rankings-1983.html">'83</a>
+<a href="rankings-1984.html">'84</a><a href="rankings-1985.html">'85</a><a href="rankings-1986.html">'86</a><a href="rankings-1987.html">'87</a>
+<a href="rankings-1988.html">'88</a><a href="rankings-1989.html">'89</a><a href="rankings-1990.html">'90</a><a href="rankings-1991.html">'91</a>
+<a href="rankings-1992.html">'92</a><a href="rankings-1993.html">'93</a><a href="rankings-1994.html">'94</a><a href="rankings-1995.html">'95</a>
+<a href="rankings-1996.html">'96</a><a href="rankings-1997.html">'97</a><a href="rankings-1998.html">'98</a><a href="rankings-1999.html">'99</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="column-panel" class="artist-panel" aria-hidden="true">
+<div class="container">
+  <div class="column-grid" aria-label="Column categories">
+    <a href="/column/guides/naming.html">Guides</a>
+    <a href="/column/essays/index.html">Essays</a>
+    <a href="/column/deep-dive/index.html">Deep Dive</a>
+    <a href="/column/notes/index.html">Notes</a>
+    <a class="column-grid__all" href="/column/index.html">All Columns →</a>
+  </div>
+</div>
+    </section>
+
+    <!-- ===== Main ===== -->
+    <main class="container">
+      <!-- ===== Hero ===== -->
+      <section class="hero">
+        <div class="hero-grid">
+          <section class="hero-center" aria-label="Spotlight">
+            <div class="spotlight card">
+              <h2 class="spotlight-title">この空間にランダム表示</h2>
+              <p class="spotlight-sub">（曲 / アルバム / プレイリストなど）</p>
+            </div>
+
+<div id="quick-picks" class="mini-cards" aria-label="Quick picks">
+
+  <a class="mini-card card" href="song/g/glay.pure-soul.html">
+    <h3>pure soul</h3>
+    <p>GLAY / Degree</p>
+  </a>
+
+  <a class="mini-card card" href="#">
+    <h3>おすすめ</h3>
+    <p>とか</p>
+  </a>
+
+  <a class="mini-card card" href="#">
+    <h3>おすすめ</h3>
+    <p>とか</p>
+  </a>
+
+</div>
+          </section>
+        </div>
+      </section>
+
+      <!-- ===== Editor’s Picks ===== -->
+      <section class="popular">
+        <h3 class="section-heading">Editor’s Picks</h3>
+        <div class="popular-list">
+          <p class="muted">（ここにピックアップ記事の一覧が入る予定）</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>About Us</h4>
+          <p class="muted">
+            We are dedicated to showcasing chord progressions of old Japanese pop songs.
+            Our site is a valuable resource for users who know the songs but may not understand Japanese and have no way of searching for them.
+            Even those who are not interested in chord progressions or playing music can use the site to explore an artist's discography.
+          </p>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="muted">© JP Chord Degree</p>
+        </div>
+      </div>
+    </footer>
+<!-- ページの一番下 -->
+<script>
+fetch('/songs.json')
+  .then(res => res.json())
+  .then(data => {
+    const songCount = data.length;
+    const tagCount = data.reduce((sum, song) => {
+      return sum + (song.tags ? song.tags.length : 0);
+    }, 0);
+
+    document.getElementById('song-count').textContent = songCount;
+    document.getElementById('tag-count').textContent = tagCount;
+  });
+</script>
+</body>
+  </body>
+</html>
