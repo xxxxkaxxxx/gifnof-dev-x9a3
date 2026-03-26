@@ -1,6 +1,6 @@
 async function showArtistCounts() {
   try {
-    const res = await fetch('/songs.json');
+    const res = await fetch('${BASE_PATH}songs.json');
     if (!res.ok) throw new Error('songs.json の読み込み失敗');
 
     const songs = await res.json();

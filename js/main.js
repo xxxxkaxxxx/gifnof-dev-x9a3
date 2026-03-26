@@ -3,7 +3,9 @@
    - Safe on every page (home / base / song / etc.)
    - Features run only when required elements exist
 ========================================================= */
-
+const BASE_PATH = window.location.hostname.endsWith("github.io")
+  ? `/${window.location.pathname.split("/")[1]}/`
+  : "/";
 console.log("main.js loaded ✅");
 
 // =========================================================
@@ -292,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 async function loadQuickPicks(){
 
-  const res = await fetch("/songs.json");
+  const res = await fetch("${BASE_PATH}songs.json");
   const songs = await res.json();
   const container = document.getElementById("quick-picks");
 
@@ -334,7 +336,7 @@ function buildSearchText(song) {
 }
 
 if (searchInput && resultsBox) {
-  fetch("/songs.json")
+  fetch("${BASE_PATH}songs.json")
 
     .then(response => {
       if (!response.ok) {
@@ -502,7 +504,7 @@ if (searchPageInput && searchQueryText && searchCountText && searchResultsPageLi
 
   searchPageInput.value = query;
 
-  fetch("/songs.json")
+  fetch("${BASE_PATH}songs.json")
     .then(response => {
       if (!response.ok) {
         throw new Error("songs.json could not be loaded");
@@ -657,7 +659,7 @@ searchInput.addEventListener("keydown", (e) => {
 
   const currentTagSlug = match[1];
 
-  fetch("/songs.json")
+  fetch("${BASE_PATH}songs.json")
     .then((res) => {
       if (!res.ok) throw new Error(`Failed to fetch songs.json: ${res.status}`);
       return res.json();
@@ -715,7 +717,7 @@ const tagLabels = {
   "diatonic-only":"Diatonic Only"
 };
 
-fetch('/songs.json')
+fetch('${BASE_PATH}songs.json')
   .then(response => response.json())
   .then(songs => {
     const tagCounts = {};
