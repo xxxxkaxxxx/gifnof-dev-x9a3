@@ -178,16 +178,26 @@
     </footer>
 <!-- ページの一番下 -->
 <script>
-fetch('/songs.json')
-  .then(res => res.json())
+const COUNT_BASE_PATH = window.location.hostname.endsWith("github.io")
+  ? `/${window.location.pathname.split("/")[1]}/`
+  : "/";
+
+fetch(`${COUNT_BASE_PATH}songs.json`)
+  .then(res => {
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  })
   .then(data => {
     const songCount = data.length;
     const tagCount = data.reduce((sum, song) => {
-      return sum + (song.tags ? song.tags.length : 0);
+      return sum + (Array.isArray(song.tags) ? song.tags.length : 0);
     }, 0);
 
-    document.getElementById('song-count').textContent = songCount;
-    document.getElementById('tag-count').textContent = tagCount;
+    document.getElementById("song-count").textContent = songCount;
+    document.getElementById("tag-count").textContent = tagCount;
+  })
+  .catch(err => {
+    console.error("Count load failed:", err);
   });
 </script>
 </body>
